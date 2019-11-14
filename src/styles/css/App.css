@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #e5e5e5;
+  background-color: white;
   font-family: Helvetica, sans-serif;
 }
 
@@ -28,21 +28,12 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
-.container .box {
-  width: 300px;
-  height: 100px;
-  text-align: center;
-  padding: 20px;
-  color: #1089ff;
-  border: 3px solid #23374d;
-  margin: 20px auto;
-}
 
 /*
 -------------------Nav Styling
 */
 nav {
-  height: 10vh;
+  height: 55px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -86,11 +77,49 @@ form button {
   height: 40px;
   align-self: center;
   border-radius: 4px;
-  margin: 4px 0 20px 0;
+  margin: 4px 0 8px 0;
   padding: 0 15px;
   border: none;
   background-color: #1089ff;
   font-size: 1.2rem;
+  color: #fff;
+}
+form button.cancelBtn {
+  background-color: #23374d;
+}
+
+/*
+-------------------List Incomes Styling
+*/
+.list-incomes {
+  max-width: 800px;
+  width: 75%;
+}
+.list-incomes li {
+  display: flex;
+  background-color: #40648c;
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1.2rem;
+  list-style: none;
+  justify-content: space-between;
+  font-weight: 600;
+}
+.list-incomes li .right-side {
+  display: flex;
+}
+.list-incomes li .right-side p {
+  margin: 0 15px;
+}
+.list-incomes li .right-side button {
+  margin: 0 5px;
+  width: 24px;
+  height: 24px;
+  background-color: #1089ff;
+  border-radius: 3px;
+  border: none;
   color: #fff;
 }
 

@@ -8,7 +8,7 @@ const Incomes = () => {
   const { incomes } = incomeContext;
 
   return (
-    <ul>
+    <ul className="list-incomes">
       {incomes.map(income => (
         <IncomeItem key={income.id} income={income} />
       ))}

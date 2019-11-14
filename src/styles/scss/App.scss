@@ -10,7 +10,7 @@ $text-color: #fff;
 }
 
 body {
-  background-color: $background-color;
+  background-color: white;
   font-family: Helvetica, sans-serif;
 }
 
@@ -32,22 +32,12 @@ body {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-
-  .box {
-    width: 300px;
-    height: 100px;
-    text-align: center;
-    padding: 20px;
-    color: $primary-color;
-    border: 3px solid $secondary-color;
-    margin: 20px auto;
-  }
 }
 /*
 -------------------Nav Styling
 */
 nav {
-  height: 10vh;
+  height: 55px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -96,12 +86,56 @@ form {
     height: 40px;
     align-self: center;
     border-radius: 4px;
-    margin: 4px 0 20px 0;
+    margin: 4px 0 8px 0;
     padding: 0 15px;
     border: none;
     background-color: $primary-color;
     font-size: 1.2rem;
     color: $text-color;
+
+    &.cancelBtn {
+      background-color: $secondary-color;
+    }
+  }
+}
+
+/*
+-------------------List Incomes Styling
+*/
+
+.list-incomes {
+  max-width: 800px;
+  width: 75%;
+
+  li {
+    display: flex;
+    background-color: lighten($color: $secondary-color, $amount: 18);
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 6px;
+    color: $text-color;
+    font-size: 1.2rem;
+    list-style: none;
+    justify-content: space-between;
+    font-weight: 600;
+
+    .right-side {
+      display: flex;
+
+      p {
+        margin: 0 15px;
+      }
+
+      button {
+        margin: 0 5px;
+        width: 24px;
+        height: 24px;
+        background-color: $primary-color;
+        border-radius: 3px;
+        border: none;
+        color: $text-color;
+      }
+    }
   }
 }
 
