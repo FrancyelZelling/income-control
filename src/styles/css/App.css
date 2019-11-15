@@ -9,13 +9,35 @@ body {
   font-family: Helvetica, sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: #fff;
+}
+
+.text-secondary {
+  color: #42aba9;
+}
+
 .addBtn {
   margin: 25px;
   width: 220px;
   height: 50px;
   background-color: white;
   color: #23374d;
-  border: 2px solid #1089ff;
+  border: 2px solid #0b132b;
+  font-size: 1.3rem;
+  border-radius: 5px;
+}
+
+.totalBtn {
+  margin: 25px;
+  width: 220px;
+  height: 50px;
+  background-color: #0b132b;
+  color: #fff;
+  border: none;
   font-size: 1.3rem;
   border-radius: 5px;
 }
@@ -38,7 +60,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1089ff;
+  background-color: #0b132b;
   color: #fff;
   text-align: center;
 }
@@ -51,7 +73,7 @@ nav ul {
   list-style: none;
   margin-right: 25px;
 }
-nav ul li {
+nav ul a {
   margin: 0 10px;
 }
 
@@ -63,11 +85,11 @@ form {
   flex-direction: column;
   max-width: 30%;
   margin: 25px auto;
-  animation: bounceIn 1s;
+  animation: easeIn 1s;
 }
 form input {
   height: 35px;
-  border: 2px solid #43a2ff;
+  border: 2px solid #152554;
   border-radius: 4px;
   margin: 4px 0 20px 0;
   padding: 0 15px;
@@ -80,12 +102,12 @@ form button {
   margin: 4px 0 8px 0;
   padding: 0 15px;
   border: none;
-  background-color: #1089ff;
+  background-color: #0b132b;
   font-size: 1.2rem;
   color: #fff;
 }
 form button.cancelBtn {
-  background-color: #23374d;
+  background-color: #42aba9;
 }
 
 /*
@@ -97,7 +119,7 @@ form button.cancelBtn {
 }
 .list-incomes li {
   display: flex;
-  background-color: #40648c;
+  background-color: #7ccdcb;
   padding: 20px;
   margin-top: 10px;
   border-radius: 6px;
@@ -117,13 +139,35 @@ form button.cancelBtn {
   margin: 0 5px;
   width: 24px;
   height: 24px;
-  background-color: #1089ff;
+  background-color: #0b132b;
   border-radius: 3px;
   border: none;
   color: #fff;
 }
 
-@keyframes bounceIn {
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+.about h2 {
+  margin: 10px 0;
+}
+.about h3 {
+  margin: 10px 0;
+}
+.about span {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.test {
+  animation: easeOut 1s;
+}
+
+@keyframes easeIn {
   0% {
     opacity: 0;
   }
@@ -132,6 +176,17 @@ form button.cancelBtn {
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes easeOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
   }
 }
 

@@ -1,6 +1,6 @@
-$background-color: #e5e5e5;
-$primary-color: #1089ff;
-$secondary-color: #23374d;
+$background-color: #ffffff;
+$primary-color: #0b132b;
+$secondary-color: darken(#5bc0be, 9);
 $text-color: #fff;
 
 * {
@@ -14,6 +14,18 @@ body {
   font-family: Helvetica, sans-serif;
 }
 
+a {
+  text-decoration: none;
+
+  &:visited {
+    color: $text-color;
+  }
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
 .addBtn {
   margin: 25px;
   width: 220px;
@@ -21,6 +33,17 @@ body {
   background-color: white;
   color: #23374d;
   border: 2px solid $primary-color;
+  font-size: 1.3rem;
+  border-radius: 5px;
+}
+
+.totalBtn {
+  margin: 25px;
+  width: 220px;
+  height: 50px;
+  background-color: $primary-color;
+  color: $text-color;
+  border: none;
   font-size: 1.3rem;
   border-radius: 5px;
 }
@@ -56,7 +79,7 @@ nav {
     list-style: none;
     margin-right: 25px;
 
-    li {
+    a {
       margin: 0 10px;
     }
   }
@@ -71,7 +94,7 @@ form {
   flex-direction: column;
   max-width: 30%;
   margin: 25px auto;
-  animation: bounceIn 1s;
+  animation: easeIn 1s;
 
   input {
     height: 35px;
@@ -139,7 +162,33 @@ form {
   }
 }
 
-@keyframes bounceIn {
+//--------------------- About
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+
+  h2 {
+    margin: 10px 0;
+  }
+
+  h3 {
+    margin: 10px 0;
+  }
+
+  span {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+}
+
+.test {
+  animation: easeOut 1s;
+}
+
+@keyframes easeIn {
   0% {
     opacity: 0;
   }
@@ -148,5 +197,17 @@ form {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes easeOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
   }
 }

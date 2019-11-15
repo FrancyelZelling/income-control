@@ -23,8 +23,8 @@ const Home = () => {
           <button onClick={test} className="addBtn">
             Add Income
           </button>
-          <button className="addBtn">
-            {incomes.length === 0 ? "0" : total}
+          <button className="totalBtn">
+            Total : R$: {incomes.length === 0 ? "0" : total}
           </button>
         </div>
       )}
