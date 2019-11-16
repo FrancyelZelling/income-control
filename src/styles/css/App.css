@@ -20,35 +20,41 @@ a:visited {
   color: #42aba9;
 }
 
-.addBtn {
-  margin: 25px;
-  width: 220px;
-  height: 50px;
-  background-color: white;
-  color: #23374d;
-  border: 2px solid #0b132b;
-  font-size: 1.3rem;
-  border-radius: 5px;
-}
-
-.totalBtn {
-  margin: 25px;
-  width: 220px;
-  height: 50px;
-  background-color: #0b132b;
-  color: #fff;
-  border: none;
-  font-size: 1.3rem;
-  border-radius: 5px;
-}
-
 .container {
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+  flex-wrap: nowrap;
+}
+.container button.totalBtn,
+.container button.addBtn {
+  margin: 25px;
+  width: 220px;
+  height: 50px;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  justify-content: center;
+  align-self: center;
+}
+@media screen and (max-width: 768px) {
+  .container button.totalBtn,
+.container button.addBtn {
+    font-size: 1rem;
+    width: 150px;
+  }
+}
+.container .addBtn {
+  background-color: white;
+  color: #23374d;
+  border: 2px solid #0b132b;
+}
+.container .totalBtn {
+  background-color: #0b132b;
+  color: #fff;
+  border: none;
 }
 
 /*
@@ -68,6 +74,11 @@ nav h2 {
   text-transform: uppercase;
   margin-left: 25px;
 }
+@media screen and (min-width: 1200px) {
+  nav h2 {
+    margin-left: 200px;
+  }
+}
 nav ul {
   display: flex;
   list-style: none;
@@ -76,6 +87,16 @@ nav ul {
 nav ul a {
   margin: 0 10px;
 }
+@media screen and (min-width: 1200px) {
+  nav ul {
+    margin-right: 200px;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav {
+    font-size: 0.9rem;
+  }
+}
 
 /* 
 -------------------Form Styling
@@ -83,7 +104,7 @@ nav ul a {
 form {
   display: flex;
   flex-direction: column;
-  max-width: 30%;
+  max-width: 700px;
   margin: 25px auto;
   animation: easeIn 1s;
 }
